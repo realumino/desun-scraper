@@ -1,0 +1,2262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://URL/doc/Main.aspx?tabindex=1&tabid=6 -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>世格外贸单证教学系统</title>
+    <meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+    <meta name="CODE_LANGUAGE" content="C#" />
+    <meta name="vs_defaultClientScript" content="JavaScript" />
+    <meta
+      name="vs_targetSchema"
+      content="http://schemas.microsoft.com/intellisense/ie5"
+    />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate" />
+    <link
+      href="./QuestionList(doc_Main.aspx-tabindex=-&amp;tabid=6)_files/StyleSheet.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+  </head>
+  <body leftmargin="0" bottommargin="0" rightmargin="0" topmargin="0">
+    <form
+      name="Form1"
+      method="post"
+      action="http://URL/doc/Main.aspx?tabindex=1&amp;tabid=6"
+      id="Form1"
+      enctype="multipart/form-data"
+    >
+      <div>
+        <input
+          type="hidden"
+          name="__VIEWSTATE"
+          id="__VIEWSTATE"
+          value="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"
+        />
+      </div>
+
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr valign="top">
+            <td>
+              <table
+                width="100%"
+                cellspacing="0"
+                border="0"
+                cellpadding="0"
+                id="Table1"
+              >
+                <tbody>
+                  <tr valign="top">
+                    <td
+                      align="left"
+                      background="./QuestionList(doc_Main.aspx-tabindex=-&amp;tabid=6)_files/back1.jpg"
+                    >
+                      <img
+                        src="./QuestionList(doc_Main.aspx-tabindex=-&amp;tabid=6)_files/top.jpg"
+                        border="0"
+                        usemap="#Map"
+                      />
+                    </td>
+                  </tr>
+                  <tr height="30">
+                    <td
+                      background="./QuestionList(doc_Main.aspx-tabindex=-&amp;tabid=6)_files/menuback.jpg"
+                    >
+                      <table
+                        id="Banner1_tabs"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        style="border-collapse: collapse"
+                      >
+                        <tbody>
+                          <tr>
+                            <td style="height: 30px; width: 95px">
+                              <a
+                                href="http://URL/doc/Main.aspx?tabindex=0&amp;tabid=1"
+                                ><img
+                                  src="./QuestionList(doc_Main.aspx-tabindex=-&amp;tabid=6)_files/menubutton01.jpg"
+                                  id="Banner1_tabs_ctl00_ImageTab"
+                                  border="0"
+                                  height="30"
+                                  width="95"
+                                  alt="首页"
+                              /></a>
+                            </td>
+                            <td style="height: 30px; width: 95px">
+                              <img
+                                id="ImageTab_"
+                                src="./QuestionList(doc_Main.aspx-tabindex=-&amp;tabid=6)_files/menubutton07_.jpg"
+                                border="0"
+                                alt="我的练习"
+                                height="30"
+                                width="95"
+                              />
+                            </td>
+                            <td style="height: 30px; width: 95px">
+                              <a
+                                href="http://URL/doc/Main.aspx?tabindex=2&amp;tabid=11"
+                                ><img
+                                  src="./QuestionList(doc_Main.aspx-tabindex=-&amp;tabid=6)_files/menubutton08.jpg"
+                                  id="Banner1_tabs_ctl02_ImageTab"
+                                  border="0"
+                                  height="30"
+                                  width="95"
+                                  alt="练习模板"
+                              /></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr height="9">
+                    <td
+                      background="./QuestionList(doc_Main.aspx-tabindex=-&amp;tabid=6)_files/back01.gif"
+                    ></td>
+                  </tr>
+                </tbody>
+              </table>
+              <map name="Map">
+                <area
+                  shape="RECT"
+                  coords="295,34,364,54"
+                  href="http://URL/doc/Main.aspx?tabindex=1&amp;tabid=6#"
+                  onclick="showModalDialog(&#39;/doc/Modules/PersonalInf.htm&#39;,&#39;&#39;,&#39;dialogHeight: 200px; dialogWidth:340px; center: Yes; help: No; resizable: no; status: No;scroll: off&#39;)"
+                />
+                <area
+                  shape="RECT"
+                  coords="367,34,420,54"
+                  href="http://URL/doc/Help/student/student.htm"
+                  target="_blank"
+                />
+                <area
+                  shape="RECT"
+                  coords="425,34,480,54"
+                  href="http://URL/doc/Modules/logoff.aspx"
+                />
+              </map>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table width="100%" cellspacing="0" cellpadding="10" border="0">
+                <tbody>
+                  <tr height="*" valign="top">
+                    <td id="ContentPane" width="100%">
+                      <table
+                        id="Table1"
+                        cellspacing="0"
+                        cellpadding="0"
+                        width="100%"
+                        align="center"
+                        border="0"
+                      >
+                        <tbody>
+                          <tr>
+                            <td>
+                              <table
+                                cellspacing="0"
+                                cellpadding="3"
+                                rules="all"
+                                border="1"
+                                id="ctl00_DataGridExercises"
+                                style="
+                                  background-color: White;
+                                  border-color: #cccccc;
+                                  border-width: 1px;
+                                  border-style: None;
+                                  font-size: 12px;
+                                  width: 100%;
+                                  border-collapse: collapse;
+                                "
+                              >
+                                <tbody>
+                                  <tr
+                                    style="
+                                      color: White;
+                                      background-color: #006699;
+                                      font-weight: bold;
+                                    "
+                                  >
+                                    <td align="center" style="width: 80px">
+                                      题目编号
+                                    </td>
+                                    <td align="center">题目名称</td>
+                                    <td align="center" style="width: 60px">
+                                      要求和说明
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      布置时间
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      答题
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010101</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl02_LabelA0801"
+                                        >建立业务关系</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl02_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010101/010101Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl02_LabelA1104"
+                                        >2025-9-3</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl02_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1684&amp;SID=263"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010102</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl03_LabelA0801"
+                                        >建立业务关系
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl03_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010102/010102Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl03_LabelA1104"
+                                        >2025-9-3</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl03_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1685&amp;SID=264"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010103</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl04_LabelA0801"
+                                        >建立业务关系</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl04_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010103/010103Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl04_LabelA1104"
+                                        >2025-9-3</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl04_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1686&amp;SID=268"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010104</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl05_LabelA0801"
+                                        >建立业务关系
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl05_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010104/010104Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl05_LabelA1104"
+                                        >2025-9-3</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl05_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1687&amp;SID=270"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010105</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl06_LabelA0801"
+                                        >建立业务关系</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl06_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010105/010105Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl06_LabelA1104"
+                                        >2025-9-3</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl06_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1688&amp;SID=271"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010106</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl07_LabelA0801"
+                                        >建立业务关系
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl07_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010106/010106Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl07_LabelA1104"
+                                        >2025-9-3</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl07_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1689&amp;SID=273"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010107</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl08_LabelA0801"
+                                        >建立业务关系</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl08_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010107/010107Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl08_LabelA1104"
+                                        >2025-9-3</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl08_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1690&amp;SID=274"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010501</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl09_LabelA0801"
+                                        >接受</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl09_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010501/010501Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl09_LabelA1104"
+                                        >2025-9-24</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl09_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1707&amp;SID=292"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010502</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl10_LabelA0801"
+                                        >接受</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl10_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010502/010502Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl10_LabelA1104"
+                                        >2025-9-24</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl10_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1708&amp;SID=294"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010503</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl11_LabelA0801"
+                                        >接受</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl11_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010503/010503Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl11_LabelA1104"
+                                        >2025-9-24</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl11_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1709&amp;SID=295"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010504</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl12_LabelA0801"
+                                        >接受</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl12_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010504/010504Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl12_LabelA1104"
+                                        >2025-9-24</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl12_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1710&amp;SID=296"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010505</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl13_LabelA0801"
+                                        >接受</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl13_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010505/010505Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl13_LabelA1104"
+                                        >2025-9-24</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl13_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1711&amp;SID=298"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010506</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl14_LabelA0801"
+                                        >接受</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl14_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010506/010506Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl14_LabelA1104"
+                                        >2025-9-24</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl14_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1712&amp;SID=299"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010601</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl15_LabelA0801"
+                                        >催证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl15_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010601/010601Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl15_LabelA1104"
+                                        >2025-9-24</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl15_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1713&amp;SID=300"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010602</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl16_LabelA0801"
+                                        >催证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl16_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010602/010602Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl16_LabelA1104"
+                                        >2025-9-24</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl16_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1714&amp;SID=302"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010603</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl17_LabelA0801"
+                                        >催证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl17_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010603/010603Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl17_LabelA1104"
+                                        >2025-9-24</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl17_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1715&amp;SID=303"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010301</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl18_LabelA0801"
+                                        >发盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl18_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010301/010301Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl18_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl18_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1696&amp;SID=276"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010302</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl19_LabelA0801"
+                                        >发盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl19_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010302/010302Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl19_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl19_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1697&amp;SID=277"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010303</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl20_LabelA0801"
+                                        >发盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl20_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010303/010303Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl20_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl20_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1698&amp;SID=278"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010304</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl21_LabelA0801"
+                                        >发盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl21_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010304/010304Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl21_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl21_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1699&amp;SID=280"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010305</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl22_LabelA0801"
+                                        >发盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl22_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010305/010305Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl22_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl22_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1700&amp;SID=281"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010401</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl23_LabelA0801"
+                                        >还盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl23_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010401/010401Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl23_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl23_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1701&amp;SID=282"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010402</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl24_LabelA0801"
+                                        >还盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl24_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010402/010402Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl24_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl24_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1702&amp;SID=284"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010403</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl25_LabelA0801"
+                                        >还盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl25_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010403/010403Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl25_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl25_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1703&amp;SID=286"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010404</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl26_LabelA0801"
+                                        >还盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl26_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010404/010404Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl26_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl26_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1704&amp;SID=288"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010405</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl27_LabelA0801"
+                                        >还盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl27_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010405/010405Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl27_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl27_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1705&amp;SID=289"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010406</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl28_LabelA0801"
+                                        >还盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl28_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010406/010406Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl28_LabelA1104"
+                                        >2025-9-17</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl28_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1706&amp;SID=291"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010201</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl29_LabelA0801"
+                                        >询盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl29_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010201/010201Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl29_LabelA1104"
+                                        >2025-9-10</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl29_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1691&amp;SID=275"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010202</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl30_LabelA0801"
+                                        >询盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl30_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010202/010202Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl30_LabelA1104"
+                                        >2025-9-10</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl30_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1692&amp;SID=265"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010203</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl31_LabelA0801"
+                                        >询盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl31_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010203/010203Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl31_LabelA1104"
+                                        >2025-9-10</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl31_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1693&amp;SID=266"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010204</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl32_LabelA0801"
+                                        >询盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl32_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010204/010204Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl32_LabelA1104"
+                                        >2025-9-10</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl32_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1694&amp;SID=267"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010205</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl33_LabelA0801"
+                                        >询盘</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl33_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010205/010205Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl33_LabelA1104"
+                                        >2025-9-10</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl33_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1695&amp;SID=272"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">040101</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl34_LabelA0801"
+                                        >制货物出运委托书</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl34_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/040101/040101Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl34_LabelA1104"
+                                        >2025-10-22</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl34_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1746&amp;SID=323"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">040201</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl35_LabelA0801"
+                                        >制出口货物订舱委托书</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl35_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/040201/040201Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl35_LabelA1104"
+                                        >2025-10-22</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl35_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1747&amp;SID=324"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">040301</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl36_LabelA0801"
+                                        >制托运单</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl36_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/040301/040301Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl36_LabelA1104"
+                                        >2025-10-22</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl36_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1748&amp;SID=326"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">040302</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl37_LabelA0801"
+                                        >制集装箱货物托运单</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl37_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/040302/040302Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl37_LabelA1104"
+                                        >2025-10-22</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl37_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1749&amp;SID=424"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">040303</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl38_LabelA0801"
+                                        >制集装箱货物托运单</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl38_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/040303/040303Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl38_LabelA1104"
+                                        >2025-10-22</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl38_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1750&amp;SID=433"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">040401</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl39_LabelA0801"
+                                        >制出口货物明细单</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl39_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/040401/040401Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl39_LabelA1104"
+                                        >2025-10-22</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl39_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1751&amp;SID=331"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020401</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl40_LabelA0801"
+                                        >制形式发票(2008年单证员考试国际商务单证缮制与操作试题)</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl40_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020401/020401Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl40_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl40_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1730&amp;SID=398"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030101</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl41_LabelA0801"
+                                        >制信用证开证申请书</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl41_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030101/030101Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl41_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl41_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1731&amp;SID=279"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030102</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl42_LabelA0801"
+                                        >制信用证开证申请书
+                                        (2005年单证员考试国际商务单证缮制与操作试题)
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl42_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030102/030102Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl42_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl42_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1732&amp;SID=285"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030103</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl43_LabelA0801"
+                                        >制信用证开证申请书</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl43_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030103/030103Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl43_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl43_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1733&amp;SID=421"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030201</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl44_LabelA0801"
+                                        >根据外销合同审核信用证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl44_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030201/030201Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl44_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl44_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1734&amp;SID=287"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030202</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl45_LabelA0801"
+                                        >根据外销合同审核信用证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl45_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030202/030202Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl45_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl45_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1735&amp;SID=290"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030203</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl46_LabelA0801"
+                                        >根据外销合同审核信用证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl46_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030203/030203Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl46_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl46_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1736&amp;SID=293"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030204</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl47_LabelA0801"
+                                        >根据外销合同审核信用证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl47_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030204/030204Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl47_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl47_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1737&amp;SID=297"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030205</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl48_LabelA0801"
+                                        >根据外销合同审核信用证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl48_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030205/030205Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl48_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl48_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1738&amp;SID=301"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030206</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl49_LabelA0801"
+                                        >根据外销合同审核信用证
+                                        (2005年6月单证员考试国际商务单证缮制与操作试题)
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl49_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030206/030206Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl49_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl49_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1739&amp;SID=308"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030207</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl50_LabelA0801"
+                                        >根据外销合同审核信用证
+                                        (2005年11月单证员考试国际商务单证缮制与操作试题)
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl50_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030207/030207Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl50_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl50_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1740&amp;SID=310"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030208</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl51_LabelA0801"
+                                        >根据外销合同审核信用证
+                                        (2006年单证员考试国际商务单证缮制与操作试题)
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl51_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030208/030208Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl51_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl51_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1741&amp;SID=311"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030209</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl52_LabelA0801"
+                                        >根据外销合同审核信用证
+                                        (2007年单证员考试国际商务单证缮制与操作试题)
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl52_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030209/030209Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl52_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl52_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1742&amp;SID=312"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030210</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl53_LabelA0801"
+                                        >根据外销合同审核信用证
+                                        (2008年单证员考试国际商务单证缮制与操作试题)
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl53_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030210/030210Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl53_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl53_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1743&amp;SID=392"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030211</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl54_LabelA0801"
+                                        >根据外销合同审核信用证
+                                        (2009年单证员考试国际商务单证缮制与操作试题)</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl54_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030211/030211Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl54_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl54_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1744&amp;SID=423"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">030212</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl55_LabelA0801"
+                                        >根据合同内容审核信用证(2010年单证员考试国际商务单证缮制与操作试题)
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl55_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/030212/030212Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl55_LabelA1104"
+                                        >2025-10-15</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl55_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1745&amp;SID=495"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010701</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl56_LabelA0801"
+                                        >改证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl56_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010701/010701Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl56_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl56_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1716&amp;SID=304"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010702</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl57_LabelA0801"
+                                        >改证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl57_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010702/010702Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl57_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl57_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1717&amp;SID=305"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">010703</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl58_LabelA0801"
+                                        >改证</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl58_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/010703/010703Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl58_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl58_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1718&amp;SID=306"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020101</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl59_LabelA0801"
+                                        >出口合同签订</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl59_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020101/020101Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl59_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl59_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1719&amp;SID=307"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020102</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl60_LabelA0801"
+                                        >出口合同签订</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl60_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020102/020102Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl60_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl60_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1720&amp;SID=309"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020103</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl61_LabelA0801"
+                                        >出口合同签订</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl61_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020103/020103Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl61_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl61_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1721&amp;SID=313"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020104</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl62_LabelA0801"
+                                        >出口合同签订</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl62_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020104/020104Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl62_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl62_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1722&amp;SID=314"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020105</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl63_LabelA0801"
+                                        >出口合同签订</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl63_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020105/020105Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl63_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl63_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1723&amp;SID=315"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020106</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl64_LabelA0801"
+                                        >出口合同签订
+                                      </span>
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl64_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020106/020106Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl64_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl64_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1724&amp;SID=316"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020201</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl65_LabelA0801"
+                                        >进口合同签订</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl65_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020201/020201Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl65_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl65_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1725&amp;SID=317"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020202</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl66_LabelA0801"
+                                        >进口合同签订</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl66_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020202/020202Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl66_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl66_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1726&amp;SID=318"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020301</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl67_LabelA0801"
+                                        >买卖合同签订</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl67_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020301/020301Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl67_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl67_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1727&amp;SID=319"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020302</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl68_LabelA0801"
+                                        >买卖合同签订</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl68_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020302/020302Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl68_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl68_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1728&amp;SID=320"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr style="color: #000066">
+                                    <td style="width: 80px">020303</td>
+                                    <td>
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl69_LabelA0801"
+                                        >采购合同订购</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl69_HyperLinkA0801"
+                                        href="http://URL/doc/Doc/desunsoft/Exercise/020303/020303Q_requirement.mht"
+                                        target="_blank"
+                                        >查看</a
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 120px">
+                                      <span
+                                        id="ctl00_DataGridExercises_ctl69_LabelA1104"
+                                        >2025-10-11</span
+                                      >
+                                    </td>
+                                    <td align="center" style="width: 60px">
+                                      <a
+                                        id="ctl00_DataGridExercises_ctl69_HyperLinkShow"
+                                        href="http://URL/doc/Modules/A071.aspx?tabindex=1&amp;tabid=6&amp;EID=1729&amp;SID=321"
+                                        >答题</a
+                                      >
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <br />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>
