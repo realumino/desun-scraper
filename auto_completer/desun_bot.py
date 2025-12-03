@@ -119,100 +119,123 @@ def main():
                 pass
 
 def process_single_exercise(driver):
-    # Check for existing answers
+    print("  Extracting Reference Answers...")
+    reference_urls = []
+    
+    # Try finding by ID
     try:
-        # If there are "删除" (Delete) links, it means an answer has been submitted
-        existing_answers = driver.find_elements(By.PARTIAL_LINK_TEXT, "删除")
-        if len(existing_answers) > 0:
-            print("  Answer already submitted. Skipping.")
-            return
+        WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, "//a[contains(@id, 'HyperLinkA1002')]"))
+        )
+        elements = driver.find_elements(By.XPATH, "//a[contains(@id, 'HyperLinkA1002')]")
+        for el in elements:
+            href = el.get_attribute("href")
+            if href:
+                reference_urls.append(href)
     except:
         pass
 
-    print("  Extracting Reference Answer...")
-    try:
-        # Find the answer link
-        try:
-            answer_link = WebDriverWait(driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, "//a[contains(@id, 'HyperLinkA1002')]"))
-            )
-            answer_url = answer_link.get_attribute("href")
-        except:
-            # Fallback by text
-            links = driver.find_elements(By.TAG_NAME, "a")
-            answer_url = None
-            for link in links:
-                href = link.get_attribute("href")
-                if href and "introduce.mht" in href:
-                    answer_url = href
-                    break
-            if not answer_url:
-                print("  Answer link not found. Skipping.")
-                return
+    # Fallback: find by content
+    if not reference_urls:
+        links = driver.find_elements(By.TAG_NAME, "a")
+        for link in links:
+            href = link.get_attribute("href")
+            if href and "introduce.mht" in href:
+                reference_urls.append(href)
 
-        # Download the answer
+    if not reference_urls:
+        print("  No reference answers found. Skipping.")
+        return
+
+    # Check existing answers
+    existing_answers = driver.find_elements(By.PARTIAL_LINK_TEXT, "删除")
+    
+    if len(existing_answers) == len(reference_urls):
+        print(f"  Answer count matches ({len(existing_answers)}). Skipping.")
+        return
+
+    # Delete existing if mismatch
+    if len(existing_answers) > 0:
+        print("  Count mismatch. Deleting existing answers...")
+        while True:
+            try:
+                btn = driver.find_element(By.PARTIAL_LINK_TEXT, "删除")
+                btn.click()
+                try:
+                    WebDriverWait(driver, 3).until(EC.alert_is_present())
+                    driver.switch_to.alert.accept()
+                except:
+                    pass
+                time.sleep(2)
+            except:
+                break
+
+    # Submit all
+    for i, url in enumerate(reference_urls):
+        print(f"  Submitting answer {i+1}/{len(reference_urls)}...")
+        submit_answer(driver, url)
+
+def submit_answer(driver, answer_url):
+    try:
+        # Download
         cookies = {c['name']: c['value'] for c in driver.get_cookies()}
         response = requests.get(answer_url, cookies=cookies)
         
         if response.status_code != 200:
-            print("  Failed to download answer.")
+            print("    Failed to download answer.")
             return
 
-        # Save as .doc with random name
+        # Save temp file
         random_name = generate_random_string()
         file_name = f"{random_name}.doc"
         file_path = os.path.abspath(file_name)
         with open(file_path, "wb") as f:
             f.write(response.content)
         
-        # Submit Answer
-        print("  Submitting Answer...")
-        # Click "Add New" (新增)
+        # Click Add New
         try:
-            add_new_btn = WebDriverWait(driver, 5).until(
-                EC.element_to_be_clickable((By.ID, "ButtonAddNew"))
-            )
-            add_new_btn.click()
-        except:
             try:
-                add_new_btn = driver.find_element(By.XPATH, "//input[@value='新增']")
+                add_new_btn = WebDriverWait(driver, 5).until(
+                    EC.element_to_be_clickable((By.ID, "ButtonAddNew"))
+                )
                 add_new_btn.click()
             except:
-                print("  'Add New' button not found.")
-                return
+                add_new_btn = driver.find_element(By.XPATH, "//input[@value='新增']")
+                add_new_btn.click()
+        except:
+            print("    'Add New' button not found.")
+            if os.path.exists(file_path):
+                os.remove(file_path)
+            return
         
         time.sleep(1)
         
-        # Fill the form
+        # Fill form
         try:
             title_input = WebDriverWait(driver, 5).until(
                 EC.presence_of_element_located((By.XPATH, "//input[contains(@id, 'TextBoxA1306')]"))
             )
             title_input.clear()
-            random_title = generate_random_string()
-            title_input.send_keys(random_title)
+            title_input.send_keys(generate_random_string())
             
             file_input = driver.find_element(By.XPATH, "//input[contains(@id, 'FileA1304')]")
             file_input.send_keys(file_path)
             
-            # Save
             save_btn = driver.find_element(By.XPATH, "//a[contains(@id, 'LinkButtonUpdate')]")
             save_btn.click()
-            print("  Clicked Save.")
             
-            # Wait for save to complete
             time.sleep(2)
-            
-            # Clean up
-            if os.path.exists(file_path):
-                os.remove(file_path)
-                print(f"  Removed temporary file: {file_path}")
+            print("    Saved.")
             
         except Exception as e:
-            print(f"  Error filling form: {e}")
+            print(f"    Error filling form: {e}")
+            
+        finally:
+            if os.path.exists(file_path):
+                os.remove(file_path)
 
     except Exception as e:
-        print(f"  Error in single exercise: {e}")
+        print(f"    Error submitting answer: {e}")
 
 
 if __name__ == "__main__":
