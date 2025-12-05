@@ -15,15 +15,16 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from urllib.parse import urljoin, urlparse
 import re
+from mht2html import mht_to_html
 
 
 class DesunScraper:
-    def __init__(self, base_url=None, chromedriver_path=None):
+    def __init__(self, base_url=None, chromedriver_path=None, output_format="MHT"):
         self.driver = None
         self.base_url = base_url
-        self.chromedriver_path = chromedriver_path
         self.session = requests.Session()
         self.download_dir = os.path.join(os.getcwd(), "downloads")
+        self.output_format = output_format
         
         # 创建下载目录
         if not os.path.exists(self.download_dir):
@@ -31,7 +32,7 @@ class DesunScraper:
     
     def setup_driver(self):
         """设置Chrome浏览器驱动"""
-        chrome_options = Options()
+        options = webdriver.ChromeOptions()
         # 设置下载目录
         prefs = {
             "download.default_directory": self.download_dir,
@@ -39,12 +40,8 @@ class DesunScraper:
             "download.directory_upgrade": True,
             "safebrowsing.enabled": True
         }
-        chrome_options.add_experimental_option("prefs", prefs)
-        
-        # 使用用户指定的chromedriver路径，如果没有指定则使用默认路径
-        chromedriver_path = self.chromedriver_path or "C:/WebDriver/bin/chromedriver.exe"
-        service = webdriver.ChromeService(executable_path=chromedriver_path)
-        self.driver = webdriver.Chrome(options=chrome_options, service=service)
+        options.add_experimental_option("prefs", prefs)
+        self.driver = webdriver.Chrome(options)
         self.driver.implicitly_wait(10)
     
     def manual_login(self):
@@ -118,18 +115,45 @@ class DesunScraper:
         return questions
     
     def download_file(self, url, filename):
-        """下载文件"""
+        """下载文件到内存并根据需要进行转换"""
         try:
             response = self.session.get(url, stream=True)
             response.raise_for_status()
             
-            with open(filename, 'wb') as f:
-                for chunk in response.iter_content(chunk_size=8192):
-                    if chunk:
-                        f.write(chunk)
+            # 将文件内容保存在内存中
+            file_content = bytearray()
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    file_content.extend(chunk)
             
             print(f"下载成功: {filename}")
-            return True
+            
+            # 检查是否是MHT文件
+            is_mht_file = filename.lower().endswith(('.mht', '.mhtml'))
+            
+            # 根据选择的输出格式处理文件
+            if is_mht_file:
+                if self.output_format == "MHT":
+                    # MHT格式：直接保存
+                    with open(filename, 'wb') as f:
+                        f.write(file_content)
+                    return True
+                elif self.output_format == "HTML":
+                    # HTML格式：转换为HTML
+                    html_filename = self.convert_mht_to_html(file_content, filename)
+                    return html_filename is not None
+                elif self.output_format == "DOC":
+                    # DOC格式：修改文件扩展名为.doc
+                    doc_filename = os.path.splitext(filename)[0] + '.doc'
+                    with open(doc_filename, 'wb') as f:
+                        f.write(file_content)
+                    return True
+            else:
+                # 对于非MHT文件，直接保存
+                with open(filename, 'wb') as f:
+                    f.write(file_content)
+                return True
+                
         except Exception as e:
             print(f"下载失败 {url}: {e}")
             return False
@@ -138,6 +162,30 @@ class DesunScraper:
         """从URL中提取文件名"""
         parsed = urlparse(url)
         return os.path.basename(parsed.path)
+    
+    def convert_mht_to_html(self, mht_content, original_filename):
+        """将MHT内容转换为HTML文件"""
+        try:
+            # 调用转换函数直接处理内存中的MHT内容
+            html_content = mht_to_html(mht_content)
+            
+            if html_content:
+                # 生成新的HTML文件路径
+                html_file_path = os.path.splitext(original_filename)[0] + '.html'
+                
+                # 直接将HTML内容写入文件
+                with open(html_file_path, 'wb') as f:
+                    f.write(html_content)
+                
+                print(f"MHT转HTML成功: {html_file_path}")
+                return html_file_path
+            else:
+                print(f"MHT转HTML失败: {original_filename}")
+                return None
+                
+        except Exception as e:
+            print(f"MHT文件转换出错 {original_filename}: {e}")
+            return None
     
     def process_question(self, question):
         """处理单个题目"""
@@ -164,7 +212,7 @@ class DesunScraper:
         # 导航到题目详情页面获取参考文件和参考答案
         try:
             self.driver.get(question['answer_url'])
-            time.sleep(2)  # 等待页面加载
+            time.sleep(1)  # 等待页面加载
             
             # 下载参考文件
             reference_files = self.driver.find_elements(By.CSS_SELECTOR, "#DataListFiles a")
@@ -266,43 +314,27 @@ def get_base_url_from_user():
             print("重新输入URL...\n")
 
 
-def get_chromedriver_path_from_user():
-    """从用户获取chromedriver路径配置"""
+def get_output_format_from_user():
+    """从用户获取输出格式选择"""
     while True:
         print("=" * 50)
-        print("请配置chromedriver.exe的位置:")
-        print("1. 输入chromedriver.exe的完整路径（例如: C:/WebDriver/bin/chromedriver.exe）")
-        print("2. 如果不输入，将使用默认路径: C:/WebDriver/bin/chromedriver.exe")
+        print("请选择输出文件格式:")
+        print("1. HTML - 网页格式")
+        print("   ⚠️  警告: 选择HTML格式可能导致潜在的数据丢失")
+        print("2. MHT - 单文件网页格式")
+        print("3. DOC - Word文档格式")
         print("=" * 50)
         
-        chromedriver_path = input("请输入chromedriver.exe的路径 (直接回车使用默认路径): ").strip()
+        choice = input("请输入选择 (1-3): ").strip()
         
-        # 如果用户没有输入路径，使用默认路径
-        if not chromedriver_path:
-            return None
-        
-        # 验证路径是否存在且是文件
-        if not os.path.exists(chromedriver_path):
-            print(f"错误: 路径 '{chromedriver_path}' 不存在，请重新输入。")
-            continue
-            
-        if not os.path.isfile(chromedriver_path):
-            print(f"错误: '{chromedriver_path}' 不是一个有效的文件，请重新输入。")
-            continue
-            
-        # 验证文件名是否正确
-        if not chromedriver_path.endswith('.exe'):
-            print("错误: 文件名必须以 .exe 结尾，请重新输入。")
-            continue
-            
-        # 确认用户输入
-        print(f"\n您输入的chromedriver路径是: {chromedriver_path}")
-        confirm = input("确认使用此路径? (y/n): ").strip().lower()
-        
-        if confirm in ['y', 'yes', '是']:
-            return chromedriver_path
+        if choice == "1":
+            return "HTML"
+        elif choice == "2":
+            return "MHT"
+        elif choice == "3":
+            return "DOC"
         else:
-            print("重新输入chromedriver路径...\n")
+            print("错误: 请输入1-3之间的数字选择格式。\n")
 
 
 def main():
@@ -310,11 +342,11 @@ def main():
     # 获取用户配置的base_url
     base_url = get_base_url_from_user()
     
-    # 获取用户配置的chromedriver路径
-    chromedriver_path = get_chromedriver_path_from_user()
+    # 获取用户选择的输出格式
+    output_format = get_output_format_from_user()
     
-    # 创建爬虫实例并传入配置的base_url和chromedriver路径
-    scraper = DesunScraper(base_url=base_url, chromedriver_path=chromedriver_path)
+    # 创建爬虫实例并传入配置的base_url和输出格式
+    scraper = DesunScraper(base_url=base_url, output_format=output_format)
     scraper.run()
 
 

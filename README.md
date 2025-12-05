@@ -201,6 +201,38 @@ scraper.run()
 - **文件路径不存在**: 检查 ChromeDriver 路径是否正确
 - **权限拒绝**: 确保有足够的文件读写权限
 
+## MHT转HTML工具
+
+项目还提供了一个专用的MHT文件转换工具，可以将下载的MHT文件转换为更易于查看的HTML格式。
+
+### 使用方法
+
+```bash
+# 转换单个MHT文件
+python mht_converter.py ./downloads/document.mht
+
+# 转换单个MHT文件并指定输出目录
+python mht_converter.py ./downloads/document.mht ./output/
+
+# 批量转换目录中的所有MHT文件
+python mht_converter.py --batch ./downloads/
+
+# 批量转换并指定输出目录
+python mht_converter.py --batch ./downloads/ ./output/
+```
+
+### 功能特性
+
+- 支持单文件和批量转换模式
+- 自动检测目录中的所有MHT和MHTML文件
+- 递归搜索子目录中的文件
+- 批量转换为HTML格式
+- 保留原始文件结构
+- 显示转换进度和结果统计
+- 更好的错误处理和用户反馈
+
+详细使用说明请参见 [MHT_CONVERTER_README.md](MHT_CONVERTER_README.md) 文件。
+
 ## 技术架构
 
 - **自动化框架**: Selenium WebDriver
